@@ -2,6 +2,8 @@
 
 デフォルトのオプションを指定できる System.Text.Json.JsonSerializer
 
+## 使用例
+
 ```csharp
 using System.Text.Encodings.Web;
 using System.Text.Json;
