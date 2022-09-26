@@ -1,4 +1,4 @@
-#nullable enable
+﻿#nullable enable
 
 using System;
 using System.Collections.Generic;
@@ -300,7 +300,11 @@ public static class JsonSerializer
         CancellationToken      cancellationToken = default
     )
     {
-        return System.Text.Json.JsonSerializer.SerializeAsync( utf8Json, value, inputType, options ?? DefaultOptions, cancellationToken );
+        return System.Text.Json.JsonSerializer.SerializeAsync
+        (
+            utf8Json, value, inputType, options ?? DefaultOptions,
+            cancellationToken
+        );
     }
 
     public static void Serialize( Stream utf8Json, object value, Type inputType, JsonSerializerOptions? options = default )
@@ -327,7 +331,11 @@ public static class JsonSerializer
         CancellationToken     cancellationToken = default
     )
     {
-        return System.Text.Json.JsonSerializer.SerializeAsync( utf8Json, value, inputType, context, cancellationToken );
+        return System.Text.Json.JsonSerializer.SerializeAsync
+        (
+            utf8Json, value, inputType, context,
+            cancellationToken
+        );
     }
 
     public static void Serialize( Stream utf8Json, object value, Type inputType, JsonSerializerContext context )
